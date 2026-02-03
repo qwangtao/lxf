@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>我的图文教程库</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+
+<style>
+  :root {
+    /* 1. 主题高亮色（链接、强调文字） */
+    --theme-color: #7e7e7e; 
+
+    /* 2. 侧边栏背景色（让左边不再是纯白） */
+    --sidebar-background: #f8f9fa;
+
+    /* 3. 正文背景色（如果你想换成浅灰或米色） */
+    --background: #ffffff;
+  }
+
+  /* 如果上面的变量没生效，用下面这几行强力覆盖 */
+  .sidebar {
+    background-color: #f4f4f4 !important; /* 这里换成你想要的侧边栏颜色 */
+  }
+
+  section.content {
+    background-color: #ffffff; /* 这里换成正文颜色 */
+  }
+  
+  /* 让侧边栏的文字颜色更深一点，方便阅读 */
+  .sidebar ul li a {
+    color: #444 !important;
+  }
+</style>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+</head>
+<body>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: '冷西风',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      // 搜索配置
+      search: {
+        placeholder: '搜索教程...',
+        noData: '找不到结果',
+        depth: 3
+      },
+      // 2. 字数统计配置
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      }
+    }
+  </script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify-count/dist/countable.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+</body>
+</html>
